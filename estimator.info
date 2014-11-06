@@ -1,0 +1,5 @@
+name = Estimator
+description = Helper for estimating software development projects
+package = Bellcom
+core = 7.x
+php = 5.3

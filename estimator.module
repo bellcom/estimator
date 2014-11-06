@@ -1,0 +1,31 @@
+<?php
+/**
+ * @file
+ * Description
+ * @author Henrik Farre <hf@bellcom.dk>
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function estimator_menu() {
+  $items['estimator/ajax'] = array(
+    'title' => 'Page title',
+    'page callback' => '_estimator_ajax',
+    'page arguments' => array(),
+    'access arguments' => array('View published content'),
+    'type' => MENU_CALLBACK,
+  );
+  return $items;
+}
+
+/**
+ * _estimator_ajax
+ *
+ *
+ * @return void
+ * @author Henrik Farre <hf@bellcom.dk>
+ */
+function _estimator_ajax() {
+  drupal_json_output( ['hest' => 'test'] );
+}
